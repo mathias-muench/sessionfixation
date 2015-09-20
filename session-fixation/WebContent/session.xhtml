@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<title>Session</title>
+</h:head>
+<f:metadata>
+	<f:event type="preRenderView" listener="#{sessionHandler.viewAction(loginHandler.identifikation)}"></f:event>
+</f:metadata>
+<h:body>
+	<h:panelGrid>
+		<h:outputLabel value="Login: #{loginHandler.identifikation}"></h:outputLabel>
+		<h:outputLabel value="session: #{sessionHandler.identifikation}"></h:outputLabel>
+		<h:outputLabel value="Sitzung: #{loginSitzung.identifikation}"></h:outputLabel>
+	</h:panelGrid>
+</h:body>
+</html>
